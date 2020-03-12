@@ -1,0 +1,189 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-grid fixed>
+      <ion-row class="row">
+        <ion-col class="verde" size="12" size-md>
+          <p>Valor a Pagar Al Micro Empresario</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input class="verde2" type="text" name="Nombre" disabled="true" [(ngModel)]="total2"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <br><br><br>
+
+    <ion-grid fixed>
+
+      <ion-row class="login">
+        <ion-col size="12" size-md>
+          <h4>Producto</h4>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <h4>Unidades x Docena</h4>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <h4>Descargue</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>Vive 100</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma1"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.VIVE_100"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>Vive 100Min</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma2"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.VIVE_100_400"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>Agua</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma3"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.AGUA"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>SpeedMax</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma4"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.SPEED"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>Jugo</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma5"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.JUGO"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>Coca-Cola</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="suma6"> x12 </ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" name="Nombre" disabled [(ngModel)]="array2.COCA"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-item>
+            <label>TOTAL</label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="totalempleado2" disabled name="Nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="tu" disabled name="Nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <br><br>
+    <ion-button (click)="pagar()" class="f" expand="full" shape="round" color="tertiary" >
+        Finalizar Pago
+    </ion-button>
+  </ion-card>
+</ion-content>

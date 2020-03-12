@@ -1,0 +1,368 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/login"></ion-back-button>
+        <ion-icon slot="start" name="back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Kardex</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card>
+    
+    
+    <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md>
+        
+        <h3>Marca</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Inventario Inicial</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Facturacion en Unidades</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Rotacion Total En Unidades</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Rotacion Total Al Mayor</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Inventaro Final del Dia</h3>
+        
+      </ion-col>
+      <ion-col size="12" size-md>
+        
+        <h3>Actializar</h3>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="vive100redirec(FECHA)">
+          <h4>Vive 100</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="vive100.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="vive100.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="vive100.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="vive100.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarv100()">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="vive400redirec(FECHA)">
+          <h4>Vive 400ML</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="vive400.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="vive400.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="vive400.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso2"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="vive400.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarv400()">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="speedredirec(FECHA)">
+          <h4>SPEED</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="speed.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" [disabled]="inputabajo" [(ngModel)]="speed.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="speed.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso3"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="speed.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarspeed()">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="aguaredirec(FECHA)">
+          <h4>AGUA</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="agua.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="agua.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="agua.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso5"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="agua.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertaragua()">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="jugoredirec(FECHA)">
+          <h4>JUGO</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="jugo.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="jugo.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled  [(ngModel)]="jugo.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso4"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="jugo.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarjugo()">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="cocaredirec(FECHA)">
+          <h4>C-COLA</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="coca.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="coca.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="coca.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="caso6"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="coca.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarcoca()">
+              <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item (click)="pruebaredirec(FECHA)">
+          <h4>Prueba</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="prueba.INVENTARIO_INICIAL"> </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre"  [disabled]="inputabajo" [(ngModel)]="prueba.FACTURACION_EN_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="prueba.ROTACION_TOTAL_UNIDADES"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-label >---</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" name="Nombre" disabled [(ngModel)]="prueba.INVENTARIO_FINAL"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-button class="dos" (click)="insertarprueba()">
+              <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <h4>TOTAL</h4>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="one" disabled name="Nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="tu" disabled name="Nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="tri" disabled name="Nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="total" disabled name="Nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="for" disabled name="Nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12" size-md>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+</ion-content>

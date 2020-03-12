@@ -1,0 +1,144 @@
+
+
+.f{
+    color: rgb(255, 255, 255);
+}
+
+ion-button{
+    margin-bottom: 5%;
+    width: 100%;
+    font-weight: bold;
+    height: 95%;
+}
+
+ion-content{
+    --background: rgb(26, 26, 26) ;
+    text-align: center;
+    
+}
+
+h1{
+    font-weight: bold;
+    color: rgb(116, 116, 116);
+}
+
+ion-label{
+    color: rgb(116, 116, 116);
+}
+
+.contenido{
+    background: rgba(20, 20, 20, 0.719);
+    color: #ffffff;
+    padding: 3%;
+    height: auto;
+    display: block;
+    margin-top:3%;
+    margin-right: 100%;
+}
+
+ion-card{
+    background: rgba(20, 20, 20, 0.719);
+    color: #ffffff;
+    padding: 3%;
+    width: 95%;
+    height: auto;
+    display: block;
+    left: 1%;
+    margin-top: -3%;
+}
+
+ion-grid{
+    --background: #0000006e;
+    ion-item{
+        margin-top: 18%;
+        text-align: center;
+        --background: #5c5c5c00;
+        height: auto;
+
+    }
+    .k{
+        text-align: center;
+        --background: #5c5c5ca1;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+ion-icon {
+    margin-top: 1.8%;
+    font-size: 5px;
+    color: #06992b;
+}
+
+.f{
+    height: 40px;
+    width: 70%;
+    margin-left: 18%;
+    margin-top: 5%;
+}
+
+
+.circulo {
+    width: 39px;
+    height: 39px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border:2px solid;
+    border-color: #06992b;
+    background: none;
+}
+
+ion-select{
+    text-align: center;
+}
+
+ion-item {
+    font-size: 17px;
+    --background: #0000006e;
+    --color: #ffffff;
+    width: 100%;
+    height: auto;
+}
+ion-input{
+    --text-align: center;
+}
+
+ion-col {
+    --ion-grid-column-padding: 0px;
+}
+
+
+ion-button{
+    ion-icon {
+        font-size: 25px;
+        color: white;
+     }
+
+}
+
+.dos {
+    --background: #098127;
+    --background-activated: #098127;
+    width: 100%; 
+    height: 30px;
+    margin-left: 1%;
+    ion-icon {
+        font-size: 25px;
+     }
+}
+
+ion-select{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+img{
+    width: 60%;
+    height: auto;
+    margin-left: 15%;
+}

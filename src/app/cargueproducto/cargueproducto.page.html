@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+      <ion-icon slot="start" name="back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="a">
+
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-card class="contenido">
+    <ion-item>
+      <ion-label position="floating">Cedula:</ion-label>
+      <ion-input disabled="true" type="text" [(ngModel)]="array.CEDULA" name="Nombre"></ion-input>
+      <ion-icon slot="end" class="circulo" name="finger-print"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre:</ion-label>
+      <ion-input disabled="true" type="text" [(ngModel)]="array.NOMBRE" name="Contraseña"></ion-input>
+      <ion-icon slot="end" class="circulo" name="man"></ion-icon>
+    </ion-item>
+  </ion-card>
+
+
+
+  <ion-card>
+
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v1.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>Vive 100</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.VIVE100"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v1.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>MinVive 100</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.VIVE400"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v2.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>Agua</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.AGUA"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v3.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>SpeedMax</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.SPEED"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v4.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>Jugo</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.JUGO"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v5.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>Coca-Cola</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.COCA"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <img class="img" src="/../assets/img/v6.png">
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-label>Prueba</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-md>
+          <ion-item class="g">
+            <ion-input type="number" class="k" [(ngModel)]="datos2.PRUEBA"> </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button (click)="cargar()" class="f" expand="full" shape="round" color="tertiary">
+      <ion-icon name="cloud-upload"></ion-icon>
+    </ion-button>
+  </ion-card>
+</ion-content>

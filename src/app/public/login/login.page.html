@@ -1,0 +1,33 @@
+
+
+<ion-content class="a">
+  <ion-card>
+    <h2>Inicio de Sesion</h2>
+    <img class="circulo" src="../../assets/img/usuario.png"  alt="">
+    <ion-grid fixed class="login">
+    <ion-row>
+      <ion-col size="11" offset="0.5">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" class="input" [(ngModel)]="datos.cedula" name="Nombre"></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+    <ion-row class="dis">
+      <ion-col size="11" offset="0.5">
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" class="input" [(ngModel)]="datos.pass" name="Contraseña"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+<ion-row>
+  <ion-col size="11" offset="0.5">      
+    <ion-button (click)="login()"  expand="full" >LOGIN</ion-button>
+  </ion-col>
+</ion-row>
+  </ion-grid>
+  
+  </ion-card>
+</ion-content>
+

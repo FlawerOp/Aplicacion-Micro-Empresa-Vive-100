@@ -1,0 +1,135 @@
+.f{
+    color: rgb(255, 255, 255);
+}
+
+ion-button{
+    margin-bottom: 5%;
+    width: 100%;
+    font-weight: bold;
+    height: 95%;
+}
+
+ion-content{
+    --background: rgb(26, 26, 26) ;
+    text-align: center;
+    
+}
+
+h1{
+    font-weight: bold;
+    color: rgb(116, 116, 116);
+}
+
+ion-label{
+    color: rgb(116, 116, 116);
+    --text-align: center;
+}
+
+
+ion-card{
+    background: rgba(20, 20, 20, 0.719);
+    color: #ffffff;
+    padding: 3%;
+    width: 95%;
+    height: auto;
+    display: block;
+    left: 1%;
+    margin-top:3%;
+}
+
+ion-item {
+    font-size: 17px;
+    text-align: center;
+    --background: #00000000;
+    --color: #ffffff;
+    width: 100%;
+}
+
+ion-input{
+    --text-align: center;
+    box-decoration-break: none;
+    --color-activated: none;
+    --color-focused: none;
+    --color-hover: none;
+    --inner-box: none;
+    --placeholder-color:none;
+}
+
+ion-col {
+    --ion-grid-column-padding: 0px;
+}
+
+.row{
+    border-color: rgb(116, 116, 116);
+    border-bottom: solid 1px;
+}
+
+.rojo{
+    color: #f0ec0d;
+}
+
+.verde{
+    color: #f0ec0d;
+}
+
+.rojo2{
+    color: #fffb00;
+    font-size: 30px;
+}
+
+.verde2{
+    color: #fffb00;
+    font-size: 30px;
+}
+
+ion-button{
+    ion-icon {
+        font-size: 25px;
+     }
+
+}
+
+
+p{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+.login{
+    color: #0ab835;
+    border-color: #0ab835;
+    border-bottom: solid 1px;
+}
+
+.dos {
+    --background: #098127;
+    --background-activated: #098127;
+    width: 100%; 
+    height: 30px;
+    margin-left: 1%;
+    ion-icon {
+        font-size: 25px;
+     }
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+img{
+    width: 25%;
+    height: auto;
+    margin:38%;
+    margin-bottom: 0%;
+    margin-top: 30%;
+}
+
+.f{
+    height: 40px;
+    width: 70%;
+    margin-left: 18%;
+}

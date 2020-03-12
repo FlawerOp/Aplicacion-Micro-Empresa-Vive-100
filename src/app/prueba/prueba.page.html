@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+      <ion-icon slot="start" name="back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Kardex Prueba</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+
+  <ion-card>
+
+    <ion-grid fixed class="login">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-label>FECHA</ion-label>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-label>INVENTARIO INICIAL</ion-label>
+        </ion-col>
+
+        <ion-col size="12" size-md>
+          <ion-label>FACTURACION EN UNIDADES</ion-label>
+        </ion-col>
+
+        <ion-col size="11" size-md>
+          <ion-label> ROTACION TOTAL UNIDADES</ion-label>
+        </ion-col>
+
+        <ion-col size="11" size-md>
+          <ion-label>INVENTARIO FINAL</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid fixed class="login" *ngFor="let array of array">
+      <ion-row>
+          <ion-col size="12" size-md>
+              <ion-item>
+                <ion-input disabled="true" > {{array.DIA_MES}} </ion-input>
+              </ion-item>
+            </ion-col>
+    
+            <ion-col size="12" size-md>
+              <ion-item>
+                <ion-input disabled="true" > {{array.INVENTARIO_INICIAL}} </ion-input>
+              </ion-item>
+            </ion-col>
+    
+            <ion-col size="12" size-md>
+              <ion-item>
+                <ion-input disabled="true" > {{array.FACTURACION_EN_UNIDADES}} </ion-input>
+              </ion-item>
+            </ion-col>
+    
+            <ion-col size="12" size-md>
+              <ion-item>
+                <ion-input disabled="true" > {{array.ROTACION_TOTAL_UNIDADES}} </ion-input>
+              </ion-item>
+            </ion-col>
+    
+            <ion-col size="12" size-md>
+              <ion-item>
+                <ion-input disabled="true" > {{array.INVENTARIO_FINAL}} </ion-input>
+              </ion-item>
+            </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-card>
+</ion-content>

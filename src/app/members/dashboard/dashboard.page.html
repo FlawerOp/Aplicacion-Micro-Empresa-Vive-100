@@ -1,0 +1,78 @@
+<ion-content class="a" padding>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-buttons class="salir" expand="block" class="f" (click)="logout()">
+    <ion-icon slot="start" name="log-out"></ion-icon>
+  </ion-buttons>
+  <ion-card>
+
+
+    <ion-card-header>
+      <ion-card-subtitle>Usuario:</ion-card-subtitle>
+      <ion-card-title>{{ cedula }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <div>
+        <ion-item class="date2">
+          <ion-label>Ingresar Fecha: </ion-label>
+          <ion-input class="date" type="date" required [(ngModel)]="datos.fecha"></ion-input>
+        </ion-item>
+        <ion-button class="fecha" [disabled]="!datos.fecha" expand="block" shape="round" color="tertiary" fill="outline"
+          (click)="fecha()">
+          Añadir Fecha
+        </ion-button>
+      </div>
+      <ion-grid fixed class="login">
+        <ion-row class="uno">
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="kardex()">
+              <ion-icon name="menu"></ion-icon>
+            </ion-button>
+            <p>INVENTARIO</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="cargue()">
+              <ion-icon name="cloud-upload"></ion-icon>
+            </ion-button>
+            <p>CARGUE</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="empleados()">
+              <ion-icon name="happy"></ion-icon>
+            </ion-button>
+            <p>EMPLEADOS</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="descargue()">
+              <ion-icon name="cloud-download"></ion-icon>
+            </ion-button>
+            <p>DESCARGUE</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="venta()">
+              <ion-icon name="cash"></ion-icon>
+            </ion-button>
+            <p>VENTA MAYOR</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="recargar()">
+              <ion-icon name="refresh"></ion-icon>
+            </ion-button>
+            <p>RECARGUE</p>
+          </ion-col>
+          <ion-col size="4" offset="2">
+            <ion-button class="dos" expand="block" [disabled]="!datos.fecha" (click)="dia()">
+              <ion-icon name="sunny"></ion-icon>
+            </ion-button>
+            <p>FINALIZAR DIA</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

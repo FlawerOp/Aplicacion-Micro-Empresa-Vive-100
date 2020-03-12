@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar Empleado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="a">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-card>
+
+    <ion-grid fixed class="login">
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Cedula:</ion-label>
+            <ion-input type="number" [(ngModel)]="datos.cedula" name="Nombre"></ion-input>
+            <ion-icon slot="end" class="circulo" name="finger-print"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Nombre:</ion-label>
+            <ion-input type="text" [(ngModel)]="datos.nombre" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="man"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Apellido:</ion-label>
+            <ion-input type="text" [(ngModel)]="datos.apellido" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="person"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Telefono:</ion-label>
+            <ion-input type="number" [(ngModel)]="datos.telefono" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="call"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Ciudad: </ion-label>
+            <ion-input type="text" [(ngModel)]="datos.ciudad" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="pin"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Referencia:</ion-label>
+            <ion-input type="text" [(ngModel)]="datos.referencia" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="people"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-item>
+            <ion-label position="floating">Direccion:</ion-label>
+            <ion-input type="text" [(ngModel)]="datos.direccion" name="Contraseña"></ion-input>
+            <ion-icon slot="end" class="circulo" name="subway"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="11" offset="0.5">
+          <ion-button (click)="register()" class="f" expand="block" shape="round" color="tertiary" fill="outline">Registrar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
